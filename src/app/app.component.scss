@@ -1,0 +1,17 @@
+@import '../styles/variables';
+
+.title {
+  background: $clr-brand;
+
+  & h1 {
+    color: $clr-white;
+
+    font-family: $ff-saira;
+    font-size: $fs-display-1;
+
+    padding: $s-1;
+
+    text-align: center;
+    letter-spacing: 0.25rem;
+  }
+}
