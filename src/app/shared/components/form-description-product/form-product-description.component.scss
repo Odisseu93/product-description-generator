@@ -1,6 +1,8 @@
 @import '../../../../styles/variables';
 @import '../../../../styles/mixins';
 
+$clr-tomato: #ff6347;
+
 .product-description-container {
   @include flex(column);
   align-items: center;
@@ -9,7 +11,7 @@
 
   &__form {
     @include flex(column);
-    gap: $s-4;
+    gap: $s-4 * 2;
     align-items: flex-start;
 
     width: clamp(310px, 80vw, 800px);
@@ -18,7 +20,22 @@
 
     padding: $s-4;
 
+    & .required-field , .erro-message {
+      color: $clr-tomato;
+    }
+
+    & .error-message {
+      padding-left: $s-3;
+    }
+
+    & .invalid-field {
+      box-shadow: $shadow-red !important;
+    }
+
     & .form-group {
+      @include flex(column);
+      align-items: flex-start;
+      justify-content: center;
       font-size: $fs-body;
 
       & label {
@@ -32,6 +49,7 @@
         text-align: left;
       }
 
+
       & input {
         width: 250px;
         padding: $s-2;
@@ -42,6 +60,8 @@
           outline: unset;
           box-shadow: $shadow-blue;
         }
+
+
       }
 
       & textarea {

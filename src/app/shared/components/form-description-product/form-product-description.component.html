@@ -1,25 +1,63 @@
 <section class="product-description-container">
-  <form [formGroup]="productForm" class="product-description-container__form" (ngSubmit)="handleSubmit()">
+  <form
+    [formGroup]="productForm"
+    class="product-description-container__form"
+    (ngSubmit)="handleSubmit()"
+    >
     <fieldset class="form-group">
-      <label for="productName">Nome do Produto</label>
-      <input id="productName" required title="Digite em poucas palavras, uma descrição para o produduto"
-        class="form-control" type="text" formControlName="name" />
+      <label for="productName">
+        <span class="required-field">*</span>Nome do Produto</label>
+
+      <input
+      id="productName"
+      required
+      title="Digite em poucas palavras, uma descrição para o produduto"
+      class="form-control"
+      [ngClass]="productForm.controls['name'].touched && productForm.controls['name'].invalid ? 'invalid-field' : ''"
+      type="text"
+      formControlName="name"
+      />
+
+      <span
+        class="error-message"
+        *ngIf="validate().isInvalid('name') && productForm.controls['name'].touched">
+        O nome do produto é Obrigatória
+      </span>
     </fieldset>
 
     <fieldset class="form-group">
-      <label for="productCategory">Categoria</label>
-      <input id="productCategory" required title="Digite qual categoria este produto pertence" class="form-control"
-        type="text" formControlName="category" />
+      <label for="productCategory">
+        <span class="required-field">*</span>Categoria</label >
+
+      <input
+      id="productCategory"
+      required
+      title="Digite qual categoria este produto pertence"
+      class="form-control"
+      [ngClass]="productForm.controls['category'].touched && productForm.controls['category'].invalid ? 'invalid-field' : ''"
+      type="text"
+      formControlName="category"
+      />
+
+      <span
+        class="error-message"
+        *ngIf="validate().isInvalid('category') && productForm.controls['category'].touched">
+        A categoria do produto é Obrigatória
+      </span>
     </fieldset>
 
     <fieldset class="form-group">
       <label for="productInfo">Informações Adicionais</label>
-      <textarea id="productInfo" placeholder="Digite alguma informação adicional..." class="form-control"
-        formControlName="info">
+      <textarea
+        id="productInfo"
+        placeholder="Digite alguma informação adicional..."
+        class="form-control"
+        maxlength="200"
+        formControlName="info"
+        >
       </textarea>
+        <span>{{productForm.value.info!.length + "/200"}}</span>
     </fieldset>
     <button type="submit">Enviar</button>
   </form>
-
-  <app-product-description-result></app-product-description-result>
 </section>
