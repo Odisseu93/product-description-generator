@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms'
 import { ProductDescriptionResultComponent } from '../product-description-result/product-description-result.component'
+import { Product } from './types/product.type'
 
 @Component({
   selector: 'app-form-product-description',
@@ -10,11 +11,13 @@ import { ProductDescriptionResultComponent } from '../product-description-result
   styleUrl: './form-product-description.component.scss',
 })
 export class FormProductDescriptionComponent {
-  productForm = this.formBuilder.group({
+  private product: Product = {
     name: '',
     category: '',
     info: '',
-  })
+  }
+
+  productForm = this.formBuilder.group(this.product)
 
   constructor(private formBuilder: FormBuilder) {}
 
