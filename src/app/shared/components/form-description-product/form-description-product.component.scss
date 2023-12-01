@@ -1,0 +1,79 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.description-product-container {
+  @include flex(column);
+  align-items: center;
+
+  padding-top: 5rem;
+
+  &__form {
+    @include flex(column);
+    gap: $s-4;
+    align-items: flex-start;
+
+    width: clamp(310px, 80vw, 800px);
+
+    margin-inline: auto;
+
+    padding: $s-4;
+
+    & .form-group {
+      font-size: $fs-body;
+
+      & label {
+        display: block;
+        width: 100%;
+
+        padding-left: $s-1;
+        padding-bottom: $s-1;
+
+        font-size: $fs-body;
+        text-align: left;
+      }
+
+      & input {
+        width: 250px;
+        padding: $s-2;
+        font-size: $fs-body;
+        box-shadow: $shadow-gray;
+
+        &:focus-visible {
+          outline: unset;
+          box-shadow: $shadow-blue;
+        }
+      }
+
+      & textarea {
+        width: clamp(300px, 80vw, 500px);
+        height: 150px;
+        padding: $s-2;
+        resize: none;
+        box-shadow: $shadow-gray;
+
+        &:focus-visible {
+          outline: unset;
+          box-shadow: $shadow-blue;
+        }
+      }
+    }
+
+    & button {
+      background-color: $clr-brand;
+      color: $clr-white-rock;
+      padding: $s-2;
+
+      @media(min-width: 768px){
+        &:hover {
+          letter-spacing: 2px;
+          transform: scale(1.1);
+          transition: all .3s ease;
+        }
+      }
+
+      &:active {
+        box-shadow: $shadow-blue;
+      }
+    }
+  }
+}
