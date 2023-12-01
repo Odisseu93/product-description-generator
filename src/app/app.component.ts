@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterOutlet } from '@angular/router'
-import { FormProductDescriptionComponent } from './shared/components/form-description-product/form-product-description.component'
+import { FormProductDescriptionComponent } from './shared/components/form-product-description/form-product-description.component'
 
 @Component({
   selector: 'app-root',
