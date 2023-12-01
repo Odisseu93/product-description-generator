@@ -1,0 +1,23 @@
+<section class="product-description-container">
+  <form [formGroup]="productForm" class="product-description-container__form" (ngSubmit)="handleSubmit()">
+    <fieldset class="form-group">
+      <label for="productName">Nome do Produto</label>
+      <input id="productName" required title="Digite em poucas palavras, uma descrição para o produduto"
+        class="form-control" type="text" formControlName="name" />
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label for="productCategory">Categoria</label>
+      <input id="productCategory" required title="Digite qual categoria este produto pertence" class="form-control"
+        type="text" formControlName="category" />
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label for="productInfo">Informações Adicionais</label>
+      <textarea id="productInfo" placeholder="Digite alguma informação adicional..." class="form-control"
+        formControlName="info">
+      </textarea>
+    </fieldset>
+    <button type="submit">Enviar</button>
+  </form>
+</section>

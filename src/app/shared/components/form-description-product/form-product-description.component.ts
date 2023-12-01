@@ -2,13 +2,13 @@ import { Component } from '@angular/core'
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms'
 
 @Component({
-  selector: 'app-form-description-product',
+  selector: 'app-form-product-description',
   standalone: true,
   imports: [ReactiveFormsModule],
-  templateUrl: './form-description-product.component.html',
-  styleUrl: './form-description-product.component.scss',
+  templateUrl: './form-product-description.component.html',
+  styleUrl: './form-product-description.component.scss',
 })
-export class FormDescriptionProductComponent {
+export class FormProductDescriptionComponent {
   productForm = this.formBuilder.group({
     name: '',
     category: '',

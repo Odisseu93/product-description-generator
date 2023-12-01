@@ -1,7 +1,7 @@
 @import '../../../../styles/variables';
 @import '../../../../styles/mixins';
 
-.description-product-container {
+.product-description-container {
   @include flex(column);
   align-items: center;
 
@@ -63,11 +63,11 @@
       color: $clr-white-rock;
       padding: $s-2;
 
-      @media(min-width: 768px){
+      @media (min-width: 768px) {
         &:hover {
           letter-spacing: 2px;
           transform: scale(1.1);
-          transition: all .3s ease;
+          transition: all 0.3s ease;
         }
       }
 
