@@ -1,0 +1,24 @@
+@import "../../../../styles/variables" ;
+@import "../../../../styles/mixins" ;
+
+.result {
+  background-color: $clr-white;
+
+  width: clamp(300px,80vw, 800px);
+
+  @include flex(column);
+  align-items: start;
+
+
+  padding: $s-2;
+  margin-left: $s-2 * 2;
+  margin-bottom: $s-4;
+
+  box-shadow: $shadow-gray;
+
+  &__content {
+    padding: $s-1;
+    line-height: $s-4 * 1.3;
+    outline: .5px solid #CCCCCC;
+  }
+}
