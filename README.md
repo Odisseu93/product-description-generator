@@ -1,27 +1,38 @@
-# ProductDescriptionGenerator
+# Gerador de Descrição de Produto
+Ferramenta auxiliar para E-commerces, gera um anúncio formatado de algum produto, pronto para a publicação.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
 
-## Development server
+https://github.com/Odisseu93/product-description-generator/assets/76600539/6b93b560-b483-4b98-8d42-8d4e20c4df3b
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) na versão 17.0.3.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Servidor de Desenvolvimento
 
-## Build
+Execute `ng serve` para iniciar um servidor de desenvolvimento. Acesse `http://localhost:4200/` no navegador. A aplicação será recarregada automaticamente se você modificar algum dos arquivos de origem.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Estrutura de Código
 
-## Running unit tests
+Execute `ng generate component nome-do-componente` para gerar um novo componente. Você também pode usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Compilação
 
-## Running end-to-end tests
+Execute `ng build` para compilar o projeto. Os artefatos de compilação serão armazenados no diretório `dist/`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Executando Testes Unitários
 
-## Further help
+Execute `ng test` para executar os testes unitários via [Karma](https://karma-runner.github.io).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Desenvolvedor/Autor
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/76600539/235897309-88ab21df-d0be-4905-829c-36ab68ebc2e8.png" alt="developer: Ulisses Silvério"    width="200px" align="center"/>
+</div>
+<br>
+<div align="center" margin="50px">
+ <a href="https://ulisses.tec.br" align="center">
+  <b>Ulisses Silvério</b>
+</a>
+</div>
+
