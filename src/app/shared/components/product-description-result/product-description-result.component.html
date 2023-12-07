@@ -1,5 +1,6 @@
-<article class="result">
-  <ng-container *ngIf="product">
-    <p class="result__content">{{product.name}}</p>
+<mat-spinner *ngIf="isLoading" role="progressbar" class="spinner"></mat-spinner>
+<article class="result" *ngIf="productDescription">
+  <ng-container>
+    <p class="result__content" [innerHTML]="productDescription"></p>
   </ng-container>
 </article>

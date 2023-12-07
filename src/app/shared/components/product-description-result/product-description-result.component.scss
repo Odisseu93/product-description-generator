@@ -10,8 +10,8 @@
   align-items: start;
 
   padding: $s-2;
-  margin-left: $s-2 * 2;
   margin-bottom: $s-4;
+  margin-inline: auto;
 
   box-shadow: $shadow-gray;
 
@@ -20,4 +20,10 @@
     line-height: $s-4 * 1.3;
     outline: .5px solid #CCCCCC;
   }
+}
+
+.spinner {
+  --mdc-circular-progress-active-indicator-color: #2b2a4c;
+  width: 2rem !important;
+  margin-inline: auto;
 }

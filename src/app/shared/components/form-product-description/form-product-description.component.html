@@ -21,7 +21,7 @@
       <span
         class="error-message"
         *ngIf="validate().isInvalid('name') && productForm.controls['name'].touched">
-        O nome do produto é Obrigatória
+        O nome do produto é Obrigatório
       </span>
     </fieldset>
 
@@ -53,11 +53,15 @@
         placeholder="Digite alguma informação adicional..."
         class="form-control"
         maxlength="200"
+        (input)="countCharacters()"
         formControlName="info"
         >
       </textarea>
-        <span>{{productForm.value.info!.length + "/200"}}</span>
+        <span>{{charTotal + "/200"}}</span>
     </fieldset>
-    <button type="submit">Enviar</button>
+    <fieldset class="form-group btn-container">
+      <button class="btn-submit" type="submit">Enviar</button>
+      <button class="btn-clear" type="button" (click)="handleClear()">Limpar</button>
+    </fieldset>
   </form>
 </section>

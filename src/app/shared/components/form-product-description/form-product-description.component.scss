@@ -78,22 +78,38 @@ $clr-tomato: #ff6347;
       }
     }
 
-    & button {
-      background-color: $clr-brand;
-      color: $clr-white-rock;
-      padding: $s-2;
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
 
-      @media (min-width: 768px) {
-        &:hover {
-          letter-spacing: 2px;
-          transform: scale(1.1);
-          transition: all 0.3s ease;
+      width: 150px;
+
+      & button {
+        color: $clr-white;
+        padding: $s-2;
+
+        @media (min-width: 768px) {
+          &:hover {
+            letter-spacing: 2px;
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+          }
+        }
+
+        &:active {
+          box-shadow: $shadow-blue;
         }
       }
 
-      &:active {
-        box-shadow: $shadow-blue;
+      & .btn-submit {
+        background-color: $clr-brand;
+      }
+
+      & .btn-clear {
+        background-color: #FFA732;
       }
     }
+
   }
 }
