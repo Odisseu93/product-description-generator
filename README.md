@@ -4,24 +4,38 @@ Ferramenta auxiliar para E-commerces, gera um anúncio formatado de algum produt
 
 https://github.com/Odisseu93/product-description-generator/assets/76600539/6b93b560-b483-4b98-8d42-8d4e20c4df3b
 
+## Tecnologias
+- [Angular 17.0.0](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/) 
+- [sass](https://sass-lang.com/)
 
-Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) na versão 17.0.3.
+## <a id="product-description-generator-api"></a> Acesso API para gerar a descrição
+[Doc](https://github.com/Odisseu93/openai-api)
 
-## Servidor de Desenvolvimento
+## Rodar localmente
+0. Clone o repositório da API, e execute-o localmente (*siga o passo-a-passo do tópico anterior ["Acesso API para gerar a descrição"](#product-description-generator-api)*)
 
-Execute `ng serve` para iniciar um servidor de desenvolvimento. Acesse `http://localhost:4200/` no navegador. A aplicação será recarregada automaticamente se você modificar algum dos arquivos de origem.
+1. Clone este repositório em seu ambiente local:
+```bash
+git clone https://product-description-generator.git
+```
+---
+2. Navegue até o diretório do projeto 
 
-## Estrutura de Código
+```bash
+cd product-description-generator
+```
+---
+3. Instale as dependências  
 
-Execute `ng generate component nome-do-componente` para gerar um novo componente. Você também pode usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Compilação
-
-Execute `ng build` para compilar o projeto. Os artefatos de compilação serão armazenados no diretório `dist/`.
-
-## Executando Testes Unitários
-
-Execute `ng test` para executar os testes unitários via [Karma](https://karma-runner.github.io).
+```bash
+npm install
+```
+---
+4. Rode o servidor  localmente
+```bash
+npm dev
+```
 
 
 ## Desenvolvedor/Autor
