@@ -37,6 +37,9 @@ npm install
 npm dev
 ```
 
+## Lincença
+[MIT](LICENSE.md)
+
 
 ## Desenvolvedor/Autor
 
