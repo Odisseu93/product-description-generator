@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
-import { timeout } from 'rxjs'
 
 type RequestBody = {
   name: string
@@ -15,12 +14,16 @@ export class ProductDescriptionGeneratorService {
   constructor(private httpClient: HttpClient) {}
 
   generate({ name, category, additionalInformation }: RequestBody) {
-    return this.httpClient
-      .post<any>('http://localhost:3000/generate/product-description', {
-        name,
-        category,
-        additionalInformation,
-      })
-      .pipe(timeout(30000))
+    const postBody = {
+      name,
+      category,
+      additionalInformation,
+    }
+
+    return this.httpClient.post(
+      'https://openai-api-rho.vercel.app/generate/product-description',
+      postBody,
+      { responseType: 'text', observe: 'events', reportProgress: true }
+    )
   }
 }
