@@ -7,7 +7,12 @@ import {
 } from '@angular/forms'
 import { CommonModule } from '@angular/common'
 import { ProductDescriptionGeneratorService } from '../../services/product-description-generator.service'
-import { HttpClientModule } from '@angular/common/http'
+import {
+  HttpClientModule,
+  HttpDownloadProgressEvent,
+  HttpEvent,
+  HttpEventType,
+} from '@angular/common/http'
 import { ToastrService } from 'ngx-toastr'
 
 @Component({
@@ -90,11 +95,21 @@ export class FormProductDescriptionComponent {
         additionalInformation: this.productForm.value.additionalInformation,
       })
       .subscribe({
-        next: (response) => {
-          this.description = response.description
-          this.toasty.success('Descrição gerada com sucesso!')
+        next: (event: HttpEvent<string>) => {
+          if (event.type === HttpEventType.DownloadProgress) {
+            this.description =
+              (event as HttpDownloadProgressEvent).partialText || ''
+          } else if (event.type === HttpEventType.Response) {
+            this.description = event.body || ''
+          }
+
+          // this.toasty.success('Descrição gerada com sucesso!')
         },
-        error: (err) => this.toasty.error(err.message),
+        error: (err) => {
+          this.requestLoading = false
+          this.toasty.error(err.message)
+          throw new Error(err)
+        },
         complete: () => {
           this.requestLoading = false
         },

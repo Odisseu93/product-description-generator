@@ -58,10 +58,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "product-description-generator:build:production"
+              "buildTarget": "product-description-generator:build:production",
             },
             "development": {
-              "buildTarget": "product-description-generator:build:development"
+              "buildTarget": "product-description-generator:build:development",
+              "proxyConfig": "src/proxy.conf.json",
             }
           },
           "defaultConfiguration": "development"
