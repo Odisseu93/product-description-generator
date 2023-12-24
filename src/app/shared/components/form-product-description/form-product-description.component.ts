@@ -103,7 +103,7 @@ export class FormProductDescriptionComponent {
             this.description = event.body || ''
           }
 
-          this.toasty.success('Descrição gerada com sucesso!')
+          // this.toasty.success('Descrição gerada com sucesso!')
         },
         error: (err) => {
           this.requestLoading = false

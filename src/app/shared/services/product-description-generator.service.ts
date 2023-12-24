@@ -20,10 +20,10 @@ export class ProductDescriptionGeneratorService {
       additionalInformation,
     }
 
-    return this.httpClient.post(
-      'https://openai-api-rho.vercel.app/generate/product-description',
-      postBody,
-      { responseType: 'text', observe: 'events', reportProgress: true }
-    )
+    return this.httpClient.post('/api/generate/product-description', postBody, {
+      responseType: 'text',
+      observe: 'events',
+      reportProgress: true,
+    })
   }
 }
