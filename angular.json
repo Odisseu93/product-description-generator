@@ -59,11 +59,9 @@
           "configurations": {
             "production": {
               "buildTarget": "product-description-generator:build:production",
-              "proxyConfig": "src/proxy_prod.conf.json",
             },
             "development": {
               "buildTarget": "product-description-generator:build:development",
-              "proxyConfig": "src/proxy_dev.conf.json",
             }
           },
           "defaultConfiguration": "development"
