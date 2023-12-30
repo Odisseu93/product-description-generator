@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "http://openai-api-rho.vercel.app/",
+    "target": "https://openai-api-rho.vercel.app/",
     "secure": false,
         "pathRewrite": {
       "^/api": ""
