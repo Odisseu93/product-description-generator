@@ -2,23 +2,23 @@
 @import "../../../../styles/mixins" ;
 
 .result {
-  background-color: $clr-white;
-
   width: clamp(300px,80vw, 800px);
 
   @include flex(column);
   align-items: start;
 
   padding: $s-2;
-  margin-bottom: $s-4;
+
+  margin-bottom: 4rem;
   margin-inline: auto;
 
-  box-shadow: $shadow-gray;
-
   &__content {
+    background-color: $clr-white;
+
     padding: $s-1;
     line-height: $s-4 * 1.3;
     outline: .5px solid #CCCCCC;
+    box-shadow: $shadow-gray;
   }
 }
 
