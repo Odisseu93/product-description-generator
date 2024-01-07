@@ -7,6 +7,7 @@ import { FormProductDescriptionComponent } from './shared/components/form-produc
 import { ProductDescriptionResultComponent } from './shared/components/product-description-result/product-description-result.component'
 
 import { Nl2brPipe } from './shared/pipes/nl2br.pipe'
+import { FooterComponent } from './shared/components/footer/footer.component'
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { Nl2brPipe } from './shared/pipes/nl2br.pipe'
     MatProgressSpinnerModule,
     FormProductDescriptionComponent,
     ProductDescriptionResultComponent,
+    FooterComponent,
     Nl2brPipe,
   ],
   templateUrl: './app.component.html',

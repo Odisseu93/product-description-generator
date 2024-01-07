@@ -1,6 +1,9 @@
 <mat-spinner *ngIf="isLoading" role="progressbar" class="spinner"></mat-spinner>
 <article class="result" *ngIf="productDescription">
+<article class="result">
   <ng-container>
-    <p class="result__content" [innerHTML]="productDescription"></p>
+    <p class="result__content" [innerHTML]="productDescription">
+    <p class="result__content">
+    </p>
   </ng-container>
 </article>

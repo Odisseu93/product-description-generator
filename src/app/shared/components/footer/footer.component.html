@@ -1,0 +1,26 @@
+<footer class="footer">
+  <p class="footer__link">Desenvolvido por
+  <a rel="noreferrer noopener" href="https://ulisses.tec.br"
+    target='_blank'>Ulisses Silvério
+  </a>
+
+  <button
+    class="footer__link__btn-show-modal"
+    title="{{ isOpened ? 'fechar' : 'contato Ulisses Silvério' }}"
+    (click)="handleOpenModal()">
+    <span *ngIf="isOpened; else showModal">
+      <span class="material-symbols-outlined">
+        bottom_panel_open
+      </span>
+    </span>
+
+    <ng-template #showModal><span class="material-symbols-outlined">
+        bottom_panel_close
+      </span></ng-template>
+  </button>
+  </p>
+
+  <iframe class="footer__pop-up-site" [ngClass]="isOpened ? 'active' : ''"
+    src="https://ulisses.tec.br"
+    width="600" height="400" frameborder="0" scrolling="auto"></iframe>
+</footer>
