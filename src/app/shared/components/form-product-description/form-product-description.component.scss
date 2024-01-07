@@ -18,7 +18,7 @@ $clr-tomato: #ff6347;
 
     margin-inline: auto;
 
-    padding: $s-1;
+    padding-block: 5rem;
 
     & .required-field , .erro-message {
       color: $clr-tomato;
@@ -30,6 +30,10 @@ $clr-tomato: #ff6347;
 
     & .invalid-field {
       box-shadow: $shadow-red !important;
+    }
+
+    @media(min-width: 1099px) {
+    padding-block: 2rem;
     }
 
     & .form-group {
